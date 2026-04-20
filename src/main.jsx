@@ -4,15 +4,26 @@ import './index.css'
 
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
+import MainLayOut from './Layout/MainLayOut'
+import Homepage from './Pages/HomePage/Homepage'
+import Books from './Pages/Books/Books'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>router</div>
-  },
-  {
-    path:
+    Component: MainLayOut,
+    children: [
+      {
+        index: true,
+        Component: Homepage
+      },
+      {
+        path: '/books',
+        Component: Books
+      }
+    ]
+    
   }
-
+  
 ])
 
 createRoot(document.getElementById('root')).render(
