@@ -8,7 +8,11 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <div>router</div>
+  },
+  {
+    path:
   }
+
 ])
 
 createRoot(document.getElementById('root')).render(
