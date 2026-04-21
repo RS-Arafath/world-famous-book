@@ -77,7 +77,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end flex gap-3">
         <a className="btn bg-green-600 hover:bg-green-500">Sign In</a>
-        <NavLink to={'/signUp'}>
+        <NavLink to={'/signIn'}>
           {' '}
           <button className="btn btn-outline btn-info">Sign Up</button>
         </NavLink>
