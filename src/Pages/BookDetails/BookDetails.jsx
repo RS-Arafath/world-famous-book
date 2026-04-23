@@ -1,17 +1,17 @@
 
-import { useLoaderData, useParams } from 'react-router';
+import { use } from 'react';
+import {  useParams } from 'react-router';
 
-// const bookPromise = fetch('/booksData.json').then((res) => res.json());
+const bookPromise = fetch('/booksData.json').then((res) => res.json());
 
 
 const BookDetails = () => {
   const { bookId } = useParams()
-  console.log(bookId);
-  // const books = use(bookPromise);
-  const books = useLoaderData()
-  console.log(books);
+
+  const books = use(bookPromise)
+  
   const expectedBook = books.find((book) => book.bookId == bookId)
-  console.log(expectedBook);
+  console.log(expectedBook,'expected book');
   // console.log(books);
   
   return (
