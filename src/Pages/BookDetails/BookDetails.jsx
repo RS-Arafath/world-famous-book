@@ -31,7 +31,7 @@ const {
         <img
           src={image}
           alt={bookName}
-          className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-contain transition duration-300 cursor-pointer overflow-hidden hover:ring "
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-contain transition duration-300 cursor-pointer overflow-hidden  hover:scale-90 "
         />
       </figure>
 
