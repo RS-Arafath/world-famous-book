@@ -55,7 +55,7 @@ const {
             Review:{' '}
           </span>
           {'   '}
-          <span className="text-base sm:text-lg font-secondary leading-9">
+          <span className="text-base sm:text-lg font-secondary ">
             {review}
           </span>
         </p>
