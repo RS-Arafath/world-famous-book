@@ -25,7 +25,7 @@ const Banner = () => {
             bookshelf!
           </h1>
 
-          <button className="bg-amber-500 font-bold cursor-pointer hover:bg-amber-600 transition-all text-sm sm:text-lg md:text-xl duration-300 transform hover:scale-105 px-4 sm:px-6 md:px-8 py-3 rounded-lg  shadow-lg text-white">
+          <button className=" bg-amber-500 font-bold cursor-pointer hover:bg-amber-600 transition-all text-sm sm:text-lg md:text-xl duration-300 transform hover:scale-105 px-4 sm:px-6 md:px-8 py-3 rounded-lg  shadow-lg text-white">
             View The List
           </button>
         </div>
