@@ -26,7 +26,7 @@ const {
 } = expectedBook;
   
   return (
-    <div className="card w-11/12 container mx-auto  lg:card-side bg-base-100 shadow-xl mt-23">
+    <div className="card w-11/12 container mx-auto  lg:card-side bg-base-100 shadow-xl mt-20 md:mt-30">
       <figure className="p-5 rounded-xl w-full max-h-[500px] flex-1 ">
         <img
           src={image}
