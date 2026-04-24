@@ -12,26 +12,11 @@ const Books = () => {
    
   return (
     <div className=" w-11/12 mx-auto   mt-20 mb-10 md:mb-15 lg:mb-20 lg:my-25">
-      <div className="bg-gray-200 w-full p-3 sm:p-4 md:p-6  mb-10 text-2xl md:text-3xl lg:text-4xl text-center rounded-2xl font-bold font-secondary">
+      <div className="bg-gray-200 w-full p-3 sm:p-4 md:p-6  mb-10 text-2xl md:text-3xl lg:text-4xl text-center rounded-2xl font-bold font-secondary dark:bg-amber-200 dark:text-black">
         <h2>Books</h2>
       </div>
-      {/* <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn m-1">
-          Click
-        </div>
-        <ul
-          tabIndex="-1"
-          className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-        >
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <a>Item 2</a>
-          </li>
-        </ul>
-      </div> */}
-      <div>
+    
+      <div className='text-sm md:text-lg font-secondary font-semibold'>
         <Tabs>
           <TabList>
             <Tab>Read List</Tab>

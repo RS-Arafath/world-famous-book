@@ -11,7 +11,7 @@ const ReadList = () => {
   if (storeBook.length === 0) {
    return (
      <div className="flex flex-col items-center justify-center py-7 sm:py-8 md:py-9 lg:py-10 px-6 text-center">
-       {/* Illustration */}
+      
        <div
          className="mb-8"
          style={{ animation: 'float 3s ease-in-out infinite' }}
@@ -167,13 +167,13 @@ const ReadList = () => {
        </div>
 
        {/* Heading */}
-       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2 tracking-tight">
+       <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold  mb-2 tracking-tight">
          No Reading List data found
        </h3>
 
        {/* Subtext */}
-       <p className="text-sm text-gray-500 dark:text-gray-400 max-w-xs leading-relaxed mb-6">
-         Save articles, books, or links here — they'll be waiting whenever
+       <p className="text-sm sm:text-base font-secondary text-gray-500  max-w-xs leading-relaxed mb-6">
+         Save  books — they'll be waiting whenever
          you're ready to read.
        </p>
 

@@ -33,8 +33,8 @@ const BookDetails = (
   
 
   return (
-    <div className="card w-11/12  border border-gray-200 bg-gray-50 shadow container mx-auto  lg:card-side  overflow-hidden mt-20 md:mt-30">
-      <figure className="p-5 md:mt-3 md:ml-3 md:rounded-lg  overflow-hidden  w-full max-h-125 flex-2 bg-gray-200 py-3">
+    <div className="card w-11/12  border border-gray-200 bg-gray-50 dark:bg-gray-500 shadow container mx-auto  lg:card-side  overflow-hidden mt-20 md:mt-30">
+      <figure className="p-5 md:mt-3 md:ml-3 md:rounded-lg  overflow-hidden  w-full max-h-125 flex-2 bg-gray-200 dark:bg-gray-600  py-3">
         <img
           src={image}
           alt={bookName}
@@ -47,14 +47,17 @@ const BookDetails = (
           {bookName}
         </h2>
         <h4 className="font-secondary ">
-          <span className="text-lg md:text-xl  font-bold ">By: </span>
-          <span className="text-lg text-[#737373] md:text-xl  font-semiboldbold ">
+          <span className="text-lg md:text-xl  font-bold  ">By: </span>
+          <span className="text-lg dark:text-white text-[#737373] md:text-xl  font-semiboldbold ">
             {author}
           </span>
         </h4>
         <div className="divider my-0"></div>
 
-        <p className="font-secondary text-[#737373] text-lg">{category}</p>
+        <p className="font-secondary text-[#737373] dark:text-green-400 text-lg">
+          <span className="font-semibold font-secondary">Category:</span>{' '}
+          {category}
+        </p>
         <div className="divider my-0"></div>
 
         <p className="">
@@ -81,23 +84,29 @@ const BookDetails = (
 
         <div className="flex flex-col gap-3 font-secondary">
           <div className="flex">
-            <span className="w-40 sm:w-48 text-[#737373] ">
+            <span className="w-40 sm:w-48 text-[#737373] dark:text-white ">
               Number of pages
             </span>
-            <span className="font-semibold">: {totalPages}</span>
+            <span className="font-semibold dark:text-white ">
+              : {totalPages}
+            </span>
           </div>
           <div className="flex">
-            <span className=" w-40 sm:w-48 text-[#737373]">Publisher</span>
+            <span className=" w-40 sm:w-48 text-[#737373] dark:text-white ">
+              Publisher
+            </span>
             <span className="font-semibold">: {publisher}</span>
           </div>
           <div className="flex">
-            <span className=" w-40 sm:w-48 text-[#737373]">
+            <span className=" w-40 sm:w-48 text-[#737373] dark:text-white ">
               Year of Publishing
             </span>
             <span className="font-semibold">: {yearOfPublishing}</span>
           </div>
           <div className="flex">
-            <span className="w-40 sm:w-48 text-[#737373]">Rating</span>
+            <span className="w-40 dark:text-white  sm:w-48 text-[#737373]">
+              Rating
+            </span>
             <span className="font-semibold">: {rating}</span>
           </div>
         </div>
