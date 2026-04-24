@@ -1,30 +1,37 @@
-
 import { use } from 'react';
-import {  useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 
 const bookPromise = fetch('/booksData.json').then((res) => res.json());
 
-
 const BookDetails = () => {
-  const { bookId } = useParams()
-const navigate = useNavigate();
-  const books = use(bookPromise)
-  
-  const expectedBook = books.find((book) => book.bookId == bookId)
+  const { bookId } = useParams();
+  const navigate = useNavigate();
+  const books = use(bookPromise);
+
+  const expectedBook = books.find((book) => book.bookId == bookId);
   // console.log(expectedBook.image,'expected book');
-const {
-  bookName,
-  author,
-  image,
-  review,
-  totalPages,
-  rating,
-  category,
-  tags,
-  publisher,
-  yearOfPublishing,
-} = expectedBook;
-  
+  const {
+    bookName,
+    author,
+    image,
+    review,
+    totalPages,
+    rating,
+    category,
+    tags,
+    publisher,
+    yearOfPublishing,
+  } = expectedBook;
+
+  const handlemarkAsRead = () => {
+    /**
+     * 1) store book id
+     * 2) where to store
+     * 3) array or collection
+     * 4) if the book is akready exist show the alert
+     * 5) if not then add the book in the array or collection
+     */
+  };
   return (
     <div className="card w-11/12  border border-gray-200 bg-gray-50 shadow container mx-auto  lg:card-side  overflow-hidden mt-20 md:mt-30">
       <figure className="p-5 md:mt-3 md:ml-3 md:rounded-lg  overflow-hidden  w-full max-h-[500px] flex-2 bg-gray-200 py-3">
