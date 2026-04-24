@@ -22,7 +22,7 @@ const ErrorPage = () => {
           <div className="mt-6">
             <button
               onClick={() => navigate('/')}
-              className="btn btn-outline border-white/20 text-white hover:bg-white/10 rounded-xl"
+              className="btn btn-outline shadow-none border-white/20 text-white hover:bg-white/10 rounded-xl"
             >
               Go Back Home
             </button>

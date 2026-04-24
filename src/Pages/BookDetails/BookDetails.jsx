@@ -114,9 +114,14 @@ const BookDetails = (
             className="btn btn-primary"
             onClick={() => handlemarkAsRead(expectedBook)}
           >
-            Read
+            Mark as Read
           </button>
-          <button onClick={()=>handleWishList(expectedBook)} className="btn btn-accent">Wishlist</button>
+          <button
+            onClick={() => handleWishList(expectedBook)}
+            className="btn btn-accent"
+          >
+            Add to Wishlist
+          </button>
         </div>
       </div>
     </div>
