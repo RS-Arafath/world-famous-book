@@ -1,13 +1,17 @@
-import { use, useState } from 'react';
+import { use, useContext,} from 'react';
 import { useNavigate, useParams } from 'react-router';
+import { BookContext } from '../../BookProvider/BookProvider';
+
 
 const bookPromise = fetch('/booksData.json').then((res) => res.json());
 
-const BookDetails = () => {
+const BookDetails = (
+  
+) => {
   const { bookId } = useParams();
   const navigate = useNavigate();
   const books = use(bookPromise);
-
+   const { handlemarkAsRead} = useContext(BookContext);
   const expectedBook = books.find((book) => book.bookId == bookId);
   // console.log(expectedBook.image,'expected book');
   const {
@@ -22,32 +26,15 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = expectedBook;
+  
 
-  const [storeBook, setStoreBook] = useState([]);
 
-  const handlemarkAsRead = (currentBook) => {
-    /**
-     * 1) store book id
-     * 2) where to store
-     * 3) array or collection
-     * 4) if the book is akready exist show the alert
-     * 5) if not then add the book in the array or collection
-     */
-   
-    console.log('store book', storeBook);
-    console.log('store book length',storeBook.length);
-    const isExistBook = storeBook.find((book) => book.bookId === currentBook.bookId);
-    if (isExistBook) {
-      alert('The book is already exists');
-     
-    } else {
-      setStoreBook([...storeBook, currentBook]);
-     
-    }
-  };
+
+  
+
   return (
     <div className="card w-11/12  border border-gray-200 bg-gray-50 shadow container mx-auto  lg:card-side  overflow-hidden mt-20 md:mt-30">
-      <figure className="p-5 md:mt-3 md:ml-3 md:rounded-lg  overflow-hidden  w-full max-h-[500px] flex-2 bg-gray-200 py-3">
+      <figure className="p-5 md:mt-3 md:ml-3 md:rounded-lg  overflow-hidden  w-full max-h-125 flex-2 bg-gray-200 py-3">
         <img
           src={image}
           alt={bookName}
