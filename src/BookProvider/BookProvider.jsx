@@ -1,9 +1,17 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import { getReadListFromLocalDB } from '../utils/localDB';
 export const BookContext = createContext();
 export const BookProvider = ({ children }) => {
   const [storeBook, setStoreBook] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+  
+  // local Storage
+  useEffect(() => {
+    const getReadListFromLocalDb = getReadListFromLocalDB;
+    console.log(getReadListFromLocalDb);
+
+  })
   //mark is read handler
   const handlemarkAsRead = (currentBook) => {
     /**
