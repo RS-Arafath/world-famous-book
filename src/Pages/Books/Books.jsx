@@ -1,19 +1,41 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { BookContext } from '../../BookProvider/BookProvider';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import 'react-tabs/style/react-tabs.css';
 import ReadList from '../../Componant/ListedBook/ReadList';
 import WishList from '../../Componant/ListedBook/WishList';
-const Books = () => {
-  
 
+const Books = () => {
+  const [sortingType,setSortingType]=useState('')
   
+  console.log(sortingType);
    
   return (
     <div className=" w-11/12 mx-auto   mt-20 mb-10 md:mb-15 lg:mb-20 lg:my-25">
       <div className="bg-gray-200 w-full p-3 sm:p-4 md:p-6  mb-10 text-2xl md:text-3xl lg:text-4xl text-center rounded-2xl font-bold font-secondary text-black">
         <h2>Books</h2>
+      </div>
+      <div className="flex justify-center items-center mb-15">
+        <div
+          className="dropdown dropdown-center  
+     "
+        >
+          <div tabIndex={0} role="button" className="btn m-1 sm:text-lg">
+            Sort by ⬇️
+          </div>
+          <ul
+            tabIndex="-1"
+            className="dropdown-content menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm font-semibold"
+          >
+            <li onClick={() => setSortingType('pages')}>
+              <a>Pages</a>
+            </li>
+            <li onClick={() => setSortingType('rating')}>
+              <a>Rating</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="text-sm md:text-lg font-secondary font-semibold">
@@ -25,12 +47,12 @@ const Books = () => {
 
           <TabPanel>
             <h2>
-              <ReadList></ReadList>
+              <ReadList sortingType={sortingType}></ReadList>
             </h2>
           </TabPanel>
           <TabPanel>
             <h2>
-              <WishList></WishList>
+              <WishList sortingType={sortingType}></WishList>
             </h2>
           </TabPanel>
         </Tabs>
