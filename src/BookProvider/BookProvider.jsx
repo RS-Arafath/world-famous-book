@@ -1,17 +1,23 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext,  useState } from 'react';
 import { toast } from 'react-toastify';
-import { addReadListToLocalDB, getAllReadListFromLocalDB } from '../utils/localDB';
+import {
+  addReadListToLocalDB,
+  getAllReadListFromLocalDB,
+} from '../utils/localDB';
 export const BookContext = createContext();
-export const BookProvider = ({ children }) => {
-  const [storeBook, setStoreBook] = useState([]);
-  const [wishlist, setWishlist] = useState([]);
-  
-  // local Storage
-  useEffect(() => {
-    const getReadListFromLocalDB = getAllReadListFromLocalDB();
-    console.log(getReadListFromLocalDB,'local db');
 
-  },[])
+export const BookProvider = ({ children }) => {
+  const [wishlist, setWishlist] = useState([]);
+  const [storeBook, setStoreBook] = useState(() => {
+    return getAllReadListFromLocalDB() || [];
+  });
+
+  // local Storage
+  // useEffect(() => {
+  //   const getReadListFromLocalDB = getAllReadListFromLocalDB();
+  //   console.log(getReadListFromLocalDB, 'local DB');
+  //   setStoreBook(getAllReadListFromLocalDB);
+  // }, []);
   //mark is read handler
   const handlemarkAsRead = (currentBook) => {
     /**
@@ -23,7 +29,7 @@ export const BookProvider = ({ children }) => {
      */
 
     //local storage call
-    addReadListToLocalDB(currentBook)
+    addReadListToLocalDB(currentBook);
 
     const isExistBook = storeBook.find(
       (book) => book.bookId === currentBook.bookId,
@@ -112,13 +118,17 @@ export const BookProvider = ({ children }) => {
     }
     console.log('wishlist', currentBook, wishlist);
   };
-
+const handleClearReadList = () => {
+  localStorage.removeItem('storeBook');
+  setStoreBook([]);
+};
   const data = {
     storeBook,
     setStoreBook,
     handlemarkAsRead,
     wishlist,
     handleWishList,
+    handleClearReadList,
   };
   return <BookContext.Provider value={data}>{children}</BookContext.Provider>;
 };

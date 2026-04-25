@@ -3,10 +3,9 @@ import { BookContext } from '../../BookProvider/BookProvider';
 import BookCard from '../ui/BookCard';
 import ReadBookCard from '../ListedBookCard/ReadBookCard';
 import { useNavigate } from 'react-router';
-
 const ReadList = ({ sortingType }) => {
   const navigate = useNavigate();
-  const { storeBook } = useContext(BookContext);
+  const { storeBook, handleClearReadList } = useContext(BookContext);
   const [filterReadList, setFilterReadList] = useState(storeBook);
   
   //sorting list
@@ -17,9 +16,10 @@ useEffect(() => {
   } else if (sortingType === 'rating') {
     const sortData = [...storeBook].sort((a, b) => a.rating - b.rating);
     setFilterReadList(sortData);
+  } else {
+    setFilterReadList(storeBook); 
   }
 }, [sortingType, storeBook]);
-
   
 
   if (filterReadList.length === 0) {
@@ -219,10 +219,17 @@ useEffect(() => {
     );
   }
   return (
-    <div className="w-11/12 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  mx-auto   gap-10 mt-7 sm:mt-9 md:mt-10">
-      {filterReadList.map((book, ind) => (
-        <ReadBookCard key={ind} book={book}></ReadBookCard>
-      ))}
+    <div>
+      <div className='flex justify-end'>
+        <button onClick={handleClearReadList} className="btn btn-error">
+          Clear All
+        </button>
+      </div>
+      <div className="w-11/12 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  mx-auto   gap-10 mt-7 sm:mt-9 md:mt-10">
+        {filterReadList.map((book, ind) => (
+          <ReadBookCard key={ind} book={book}></ReadBookCard>
+        ))}
+      </div>
     </div>
   );
 };
