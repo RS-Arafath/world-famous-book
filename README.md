@@ -22,7 +22,7 @@ A modern, responsive book discovery web app — explore world-famous books, view
 ### Reading and Wish List
 ![Book Vibe - Book Activity](./src/assets/mockup/readlist.png)
 ### User Login
-![Book Vibe - User LogIn](./src/assets/mockup/signin.png)
+![Book Vibe - User LogIn](./src/assets/mockup/login.png)
 
 ---
 
