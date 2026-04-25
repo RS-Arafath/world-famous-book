@@ -7,7 +7,7 @@
 A modern, responsive book discovery web app — explore world-famous books, view detailed info, and track your personal reading journey.
 
 [![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Site-4CAF50?style=for-the-badge)](https://book-vibe-bd.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/RS-Arafath/world-famous-book.git)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/RS-Arafath/Book-Vibe)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel)](https://book-vibe-bd.vercel.app/)
 
 </div>
@@ -84,7 +84,7 @@ A modern, responsive book discovery web app — explore world-famous books, view
 ## 📁 Project Structure
 
 ```
-world-famous-book/
+Book-Vibe/
 ├── public/
 │   └── favicon.ico
 ├── src/
@@ -123,7 +123,7 @@ world-famous-book/
 
 ```bash
 # 1. Clone the repository
-git clone[ https://github.com/RS-Arafath/.git](https://github.com/RS-Arafath/world-famous-book.git)
+git clone https://github.com/RS-Arafath/world-famous-book.git
 
 # 2. Move into the project folder
 cd world-famous-book
@@ -175,7 +175,6 @@ Contributions are welcome!
 
 ---
 
-<div align="center">
 ## 👨‍💻 Author
 
 **RS Arafath**
@@ -189,7 +188,6 @@ Contributions are welcome!
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
-</div>
 
 <div align="center">
   Made with ❤️ by <a href="https://github.com/RS-Arafath">RS Arafath</a>
