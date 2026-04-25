@@ -7,7 +7,7 @@
 A modern, responsive book discovery web app — explore world-famous books, view detailed info, and track your personal reading journey.
 
 [![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Site-4CAF50?style=for-the-badge)](https://book-vibe-bd.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/RS-Arafath/Book-Vibe)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/RS-Arafath/world-famous-book.git)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel)](https://book-vibe-bd.vercel.app/)
 
 </div>
@@ -84,7 +84,7 @@ A modern, responsive book discovery web app — explore world-famous books, view
 ## 📁 Project Structure
 
 ```
-Book-Vibe/
+world-famous-book/
 ├── public/
 │   └── favicon.ico
 ├── src/
@@ -123,7 +123,7 @@ Book-Vibe/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/RS-Arafath/Book-Vibe.git
+git clone[ https://github.com/RS-Arafath/.git](https://github.com/RS-Arafath/world-famous-book.git)
 
 # 2. Move into the project folder
 cd world-famous-book
