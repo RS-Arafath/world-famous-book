@@ -1,9 +1,13 @@
 //loacal storage
-const getReadListFromLocalDB = () => {
-  const allReadList = localStorage.getItem('storeBook');
+const getAllReadListFromLocalDB = () => {
+  const allReadList = localStorage.getItem('readList');
 
+
+  if (allReadList) return allReadList;
+
+  return[]
 }
 const addReadListToLocalDB = () => {
   
 }
-export { getReadListFromLocalDB, addReadListToLocalDB };
+export { getAllReadListFromLocalDB, addReadListToLocalDB };
