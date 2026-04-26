@@ -6,6 +6,7 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import SignIn from '../Pages/SignIn/SignIn';
 import SignUp from '../Pages/SignUp/SignUp';
 import BookDetails from '../Pages/BookDetails/BookDetails';
+import PageToReadChart from '../Pages/PageToReadChart/PageToReadChart';
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
         path: 'bookDetails/:bookId',
         element: <BookDetails />,
       },
+      {
+        path: 'pageToReadChart',
+        element: <PageToReadChart></PageToReadChart>
+      }
     ],
   },
   {

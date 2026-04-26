@@ -2,8 +2,8 @@ import React from 'react';
 import { FaXTwitter, FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa6';
 const Footer = () => {
   return (
-    <footer className="   mx-auto footer  mt-20 footer-horizontal footer-center bg-base-200 text-base-content rounded p-10 text-base sm:text-lg">
-      <nav className="grid grid-flow-col gap-4 text-black font-secondary">
+    <footer className="   mx-auto footer  mt-10 footer-horizontal footer-center bg-base-200 text-base-content rounded p-10 text-base sm:text-lg">
+      <nav className="grid grid-flow-col gap-3 text-black font-secondary">
         <a className="link link-hover  hover:text-[#787676] duration-75">
           About us
         </a>

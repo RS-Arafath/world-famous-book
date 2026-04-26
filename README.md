@@ -29,6 +29,9 @@ detailed info, and track your personal reading journey.
 
 ![- Book Activity](./src/assets/mockup/readlist.png)
 
+### Reading stats 
+![- Book Stats](./src/assets/mockup/readChart.png)
+
 ### User Login
 
 ![- User LogIn](./src/assets/mockup/login.png)

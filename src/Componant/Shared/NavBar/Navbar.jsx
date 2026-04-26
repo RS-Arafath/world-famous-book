@@ -27,7 +27,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to={'/page-to-read'}
+          to={'/pageToReadChart'}
           className={({ isActive }) =>
             `font-semibold ${isActive ? 'text-green-500 border border-green-400' : ''}`
           }
