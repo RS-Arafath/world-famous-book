@@ -104,7 +104,7 @@ detailed info, and track your personal reading journey.
 ```
 world-famous-book/
 ├── public/
-│   └── json data
+│   └── json data/
 ├── src/
 │   ├── assets/               # Static images
 │   ├── components/
